@@ -1,7 +1,9 @@
 # Import functions from task_manager.task_utils package
-from task_utils import add_task, mark_task_as_complete, view_pending_tasks, calculate_progress
+try:
+    from task_manager.task_utils import add_task, mark_task_as_complete, view_pending_tasks, calculate_progress
+except ModuleNotFoundError:
+    from task_utils import add_task, mark_task_as_complete, view_pending_tasks, calculate_progress
 
-# Define the main function
 def main():
     while True:
         print("Task Management System")
