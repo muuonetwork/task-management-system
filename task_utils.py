@@ -26,7 +26,7 @@ def view_pending_tasks(tasks=tasks):
         print("No working currently")
     else:
         for i, task in enumerate(pending):
-            print(f"{i + 1}. Title: {task['"'"'title'"'"']}, Description: {task['"'"'description'"'"']}, Due Date: {task['"'"'due_date'"'"']}")
+            print(str(i + 1) + ". Title: " + task["title"] + ", Description: " + task["description"] + ", Due Date: " + task["due_date"])
 
 def calculate_progress(tasks=tasks):
     if len(tasks) == 0:
